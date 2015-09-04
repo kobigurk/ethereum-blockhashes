@@ -21,7 +21,10 @@ def add_old(header:str, n):
 # Returns the blockhash, or 0
 def get_blockhash(n):
    h = block.prevhash(block.number - n)
-   if h == 0: return self.storage[n]
+   if h == 0: 
+       return self.storage[n]
+   else:
+       return h
 
 def get_blockhash_from_storage(n):
    return self.storage[n]
